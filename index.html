@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>小红书账号与笔记可视化看板</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-shape bg-shape-a"></div>
+  <div class="bg-shape bg-shape-b"></div>
+
+  <main class="container">
+    <header class="hero">
+      <p class="eyebrow">微信公众号图片识别 + 小红书笔记采集</p>
+      <h1>法学相关账号数据看板</h1>
+      <p class="sub">展示账号规模、分类分布、热门笔记与原始图片素材。数据来源于本地爬取结果。</p>
+      <div id="stats" class="stats"></div>
+    </header>
+
+    <section class="panel">
+      <div class="controls">
+        <div id="categoryChips" class="chips"></div>
+        <input id="keyword" type="text" placeholder="搜索账号名 / 小红书号" />
+      </div>
+      <div id="topChart" class="bar-chart"></div>
+    </section>
+
+    <section class="panel">
+      <h2>账号列表</h2>
+      <div id="accountsGrid" class="accounts-grid"></div>
+    </section>
+
+    <section class="panel">
+      <h2>笔记列表（按点赞降序）</h2>
+      <p class="tip">当前仅显示前 300 条，点击标题可跳转笔记链接。</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>账号</th>
+              <th>分类</th>
+              <th>标题</th>
+              <th>点赞</th>
+              <th>类型</th>
+            </tr>
+          </thead>
+          <tbody id="notesTableBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>公众号原始图片</h2>
+      <div id="gallery" class="gallery"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

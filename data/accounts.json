@@ -1,0 +1,152 @@
+[
+  {
+    "account_name": "厚大张翔",
+    "red_id": "hdzhang",
+    "category": "教育博主",
+    "user_id": "66262646000000000d0266d5",
+    "note_count": 974,
+    "total_likes": 127268,
+    "avg_likes": 130,
+    "source_csv": "data/raw_users/厚大张翔_hdzhang.csv"
+  },
+  {
+    "account_name": "东南大学陈洪兵教授",
+    "red_id": "63809879375",
+    "category": "教授",
+    "user_id": "66eb876e000000001d0223cd",
+    "note_count": 519,
+    "total_likes": 26658,
+    "avg_likes": 51,
+    "source_csv": "data/raw_users/东南大学陈洪兵教授_63809879375.csv"
+  },
+  {
+    "account_name": "叶名怡",
+    "red_id": "MingyiYE",
+    "category": "律师",
+    "user_id": "621632d30000000010006bd3",
+    "note_count": 478,
+    "total_likes": 40433,
+    "avg_likes": 84,
+    "source_csv": "data/raw_users/叶名怡_MingyiYE.csv"
+  },
+  {
+    "account_name": "民诉督安",
+    "red_id": "danbunha",
+    "category": "民诉博主",
+    "user_id": "5d9b49a20000000001005c6e",
+    "note_count": 300,
+    "total_likes": 44237,
+    "avg_likes": 147,
+    "source_csv": "data/raw_users/民诉督安_danbunha.csv"
+  },
+  {
+    "account_name": "刘承韪-娱乐法",
+    "red_id": "1488647775",
+    "category": "娱乐法律师",
+    "user_id": "623c93a30000000021025f18",
+    "note_count": 242,
+    "total_likes": 6491,
+    "avg_likes": 26,
+    "source_csv": "data/raw_users/刘承韪-娱乐法_1488647775.csv"
+  },
+  {
+    "account_name": "张帆",
+    "red_id": "6252323898",
+    "category": "法学教师",
+    "user_id": "6349e5c1000000001802fbae",
+    "note_count": 190,
+    "total_likes": 76465,
+    "avg_likes": 402,
+    "source_csv": "data/raw_users/张帆_6252323898.csv"
+  },
+  {
+    "account_name": "AI+智慧教学-杨攀",
+    "red_id": "95687769212",
+    "category": "教师",
+    "user_id": "603a119b0000000001002664",
+    "note_count": 188,
+    "total_likes": 6131,
+    "avg_likes": 32,
+    "source_csv": "data/raw_users/AI+智慧教学-杨攀_95687769212.csv"
+  },
+  {
+    "account_name": "法大蔡元培",
+    "red_id": "969904645",
+    "category": "教授",
+    "user_id": "5b175050b1da147adfb5949d",
+    "note_count": 162,
+    "total_likes": 37003,
+    "avg_likes": 228,
+    "source_csv": "data/raw_users/法大蔡元培_969904645.csv"
+  },
+  {
+    "account_name": "阿Win老师",
+    "red_id": "4612344028",
+    "category": "教授",
+    "user_id": "65abe74a000000001400537f",
+    "note_count": 125,
+    "total_likes": 9725,
+    "avg_likes": 77,
+    "source_csv": "data/raw_users/阿Win老师_4612344028.csv"
+  },
+  {
+    "account_name": "纠纷与法治",
+    "red_id": "42710108792",
+    "category": "法治博主",
+    "user_id": "65f421590000000005009c5d",
+    "note_count": 107,
+    "total_likes": 9888,
+    "avg_likes": 92,
+    "source_csv": "data/raw_users/纠纷与法治_42710108792.csv"
+  },
+  {
+    "account_name": "商法刘斌",
+    "red_id": "8920233777",
+    "category": "商法学者",
+    "user_id": "64b8cc9a00000000140343b2",
+    "note_count": 82,
+    "total_likes": 10416,
+    "avg_likes": 127,
+    "source_csv": "data/raw_users/商法刘斌_8920233777.csv"
+  },
+  {
+    "account_name": "刘家安",
+    "red_id": "95625367952",
+    "category": "法学教师",
+    "user_id": "676ea792000000001801e8d2",
+    "note_count": 79,
+    "total_likes": 54209,
+    "avg_likes": 686,
+    "source_csv": "data/raw_users/刘家安_95625367952.csv"
+  },
+  {
+    "account_name": "Prof.王迎龙",
+    "red_id": "942616515",
+    "category": "法学学者",
+    "user_id": "5857c17e6a6a69338073a17d",
+    "note_count": 72,
+    "total_likes": 4284,
+    "avg_likes": 59,
+    "source_csv": "data/raw_users/Prof.王迎龙_942616515.csv"
+  },
+  {
+    "account_name": "林傻佬",
+    "red_id": "159561023",
+    "category": "法律从业",
+    "user_id": "5be68d5213fb880001a6d71d",
+    "note_count": 68,
+    "total_likes": 10068,
+    "avg_likes": 148,
+    "source_csv": "data/raw_users/林傻佬_159561023.csv"
+  },
+  {
+    "account_name": "施鹏鹏",
+    "red_id": "5498009862",
+    "category": "作家",
+    "user_id": "626cc802000000002102b5f9",
+    "note_count": 15,
+    "total_likes": 1706,
+    "avg_likes": 113,
+    "source_csv": "data/raw_users/施鹏鹏_5498009862.csv"
+  }
+]
