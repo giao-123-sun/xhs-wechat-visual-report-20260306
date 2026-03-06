@@ -1,2 +1,7 @@
 __pycache__/
 *.pyc
+data/note_pipeline/note_images/
+data/note_pipeline/note_details.jsonl
+data/note_pipeline/note_ocr.jsonl
+data/note_pipeline/note_downloads.jsonl
+data/note_pipeline/failures.jsonl
