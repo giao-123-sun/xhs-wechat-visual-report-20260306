@@ -2,6 +2,7 @@ const state = {
   accounts: [],
   notes: [],
   stats: null,
+  pipeline: null,
   category: "全部",
   keyword: "",
 };
@@ -27,6 +28,35 @@ function createStats() {
     `
     )
     .join("");
+}
+
+function createPipelineStats() {
+  const progress = (state.pipeline || {}).progress || {};
+  const cards = [
+    { label: "唯一笔记", value: fmt(progress.source_unique_notes || 0) },
+    { label: "详情已抓取", value: fmt(progress.detail_count || 0) },
+    { label: "OCR 已完成", value: fmt(progress.ocr_count || 0) },
+    { label: "待补详情", value: fmt(progress.detail_remaining || 0) },
+    { label: "待补 OCR", value: fmt(progress.ocr_remaining_after_detail || 0) },
+  ];
+  document.getElementById("pipelineStats").innerHTML = cards
+    .map(
+      (c) => `
+      <div class="stat-card">
+        <div class="label">${c.label}</div>
+        <div class="value">${c.value}</div>
+      </div>
+    `
+    )
+    .join("");
+
+  const categories = Object.entries(progress.processed_categories || {}).sort((a, b) => b[1] - a[1]);
+  document.getElementById("pipelineCategories").innerHTML = [
+    `<span class="chip static">OCR 模型：${progress.current_ocr_model || "未知"}</span>`,
+    ...categories.slice(0, 10).map(
+      ([name, count]) => `<span class="chip static">${name} · ${fmt(count)}</span>`
+    ),
+  ].join("");
 }
 
 function createChips() {
@@ -113,6 +143,29 @@ function renderNotes(notes) {
     .join("");
 }
 
+function renderFeaturedNotes() {
+  const featured = (state.pipeline || {}).featured_notes || [];
+  document.getElementById("featuredNotes").innerHTML = featured
+    .map(
+      (note) => `
+      <article class="feature-card">
+        ${note.cover_image ? `<img class="feature-cover" src="${note.cover_image}" alt="${note.title}" loading="lazy" />` : ""}
+        <div class="feature-body">
+          <div class="feature-top">
+            <span class="badge">${note.category}</span>
+            <span class="meta">${fmt(note.liked_count)} 赞</span>
+          </div>
+          <h3><a href="${note.note_url}" target="_blank" rel="noopener">${note.title || "无标题"}</a></h3>
+          <p class="meta">${note.account_name} · ${note.note_type || "未知类型"} · ${note.upload_time || "时间未知"}</p>
+          <p class="feature-text"><strong>正文摘录：</strong>${note.desc_excerpt || "暂无正文"}</p>
+          <p class="feature-text"><strong>图片文字：</strong>${note.ocr_excerpt || "暂无 OCR 文本"}</p>
+        </div>
+      </article>
+    `
+    )
+    .join("");
+}
+
 async function renderGallery() {
   const images = [];
   for (let i = 1; i <= 30; i++) {
@@ -139,23 +192,27 @@ async function renderGallery() {
 
 function render() {
   createStats();
+  createPipelineStats();
   createChips();
   const accounts = filteredAccounts();
   const notes = filteredNotes(accounts);
   renderChart(accounts);
   renderAccounts(accounts);
   renderNotes(notes);
+  renderFeaturedNotes();
 }
 
 async function init() {
-  const [accounts, notes, stats] = await Promise.all([
+  const [accounts, notes, stats, pipeline] = await Promise.all([
     fetch("data/accounts.json").then((r) => r.json()),
     fetch("data/notes.json").then((r) => r.json()),
     fetch("data/stats.json").then((r) => r.json()),
+    fetch("data/note_pipeline_summary.json").then((r) => r.json()),
   ]);
   state.accounts = accounts;
   state.notes = notes;
   state.stats = stats;
+  state.pipeline = pipeline;
   document.getElementById("keyword").addEventListener("input", (e) => {
     state.keyword = e.target.value || "";
     render();

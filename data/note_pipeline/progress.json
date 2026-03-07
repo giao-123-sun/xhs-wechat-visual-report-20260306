@@ -1,6 +1,23 @@
 {
   "source_unique_notes": 3593,
-  "processed_units": 1954,
-  "remaining": 1639,
-  "status": "blocked_by_cookie_expired_for_remaining_notes"
+  "detail_count": 2551,
+  "ocr_count": 1954,
+  "detail_remaining": 1042,
+  "ocr_remaining_after_detail": 597,
+  "featured_count": 18,
+  "processed_categories": {
+    "教育博主": 575,
+    "民诉博主": 238,
+    "法学教师": 261,
+    "教授": 366,
+    "律师": 209,
+    "商法学者": 62,
+    "教师": 26,
+    "娱乐法律师": 36,
+    "法律从业": 53,
+    "法治博主": 84,
+    "作家": 11,
+    "法学学者": 33
+  },
+  "current_ocr_model": "google/gemini-2.5-flash-lite"
 }

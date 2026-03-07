@@ -469,7 +469,7 @@ def merge_units() -> None:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--stage", choices=["all", "detail", "ocr", "download", "merge"], default="all")
-    parser.add_argument("--model", default="google/gemini-3-flash-preview")
+    parser.add_argument("--model", default="google/gemini-2.5-flash-lite")
     parser.add_argument("--max-images-per-note", type=int, default=6)
     parser.add_argument("--ocr-workers", type=int, default=2)
     parser.add_argument("--detail-workers", type=int, default=4)

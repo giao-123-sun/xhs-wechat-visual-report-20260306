@@ -108,6 +108,14 @@ body {
   backdrop-filter: blur(10px);
 }
 
+.section-head {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
 .controls {
   display: flex;
   flex-wrap: wrap;
@@ -146,6 +154,14 @@ body {
   border-color: var(--accent);
   color: #fff;
   background: linear-gradient(120deg, var(--accent), #2696a6);
+}
+
+.chip.static {
+  cursor: default;
+}
+
+.chips-static {
+  margin-top: 12px;
 }
 
 .bar-chart {
@@ -193,6 +209,13 @@ body {
   font-size: 1.05rem;
 }
 
+.link-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
 .meta {
   margin: 4px 0;
   color: var(--muted);
@@ -229,6 +252,62 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 14px;
+}
+
+.feature-card {
+  display: grid;
+  gap: 0;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.96);
+  overflow: hidden;
+}
+
+.feature-cover {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: rgba(31, 42, 54, 0.06);
+}
+
+.feature-body {
+  padding: 14px;
+}
+
+.feature-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+}
+
+.feature-card h3 {
+  margin: 10px 0 8px;
+  font-size: 1.08rem;
+  line-height: 1.4;
+}
+
+.feature-text {
+  margin: 10px 0 0;
+  color: var(--ink);
+  line-height: 1.65;
+  font-size: 0.95rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(15, 123, 143, 0.1);
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 700;
 }
 
 .gallery {

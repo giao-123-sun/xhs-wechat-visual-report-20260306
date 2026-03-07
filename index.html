@@ -17,9 +17,24 @@
     <header class="hero">
       <p class="eyebrow">微信公众号图片识别 + 小红书笔记采集</p>
       <h1>法学相关账号数据看板</h1>
-      <p class="sub">展示账号规模、分类分布、热门笔记与原始图片素材。数据来源于本地爬取结果。</p>
+      <p class="sub">展示账号规模、分类分布、热门笔记、OCR 处理进度与当前已整理出的可读内容。页面适合直接在 GitHub Pages 阅读。</p>
       <div id="stats" class="stats"></div>
     </header>
+
+    <section class="panel">
+      <div class="section-head">
+        <div>
+          <h2>笔记处理进度</h2>
+          <p class="tip">按笔记维度汇总正文、图片与 OCR。当前为断点续跑状态。</p>
+        </div>
+        <div class="link-row">
+          <a href="data/note_pipeline/note_units.json" target="_blank" rel="noopener">已处理笔记 JSON</a>
+          <a href="data/note_pipeline/remaining_notes.json" target="_blank" rel="noopener">待处理笔记 JSON</a>
+        </div>
+      </div>
+      <div id="pipelineStats" class="stats"></div>
+      <div id="pipelineCategories" class="chips chips-static"></div>
+    </section>
 
     <section class="panel">
       <div class="controls">
@@ -51,6 +66,16 @@
           <tbody id="notesTableBody"></tbody>
         </table>
       </div>
+    </section>
+
+    <section class="panel">
+      <div class="section-head">
+        <div>
+          <h2>已处理笔记精选</h2>
+          <p class="tip">优先展示当前已完成 OCR 的高热度笔记，兼顾正文摘要与图片文字。</p>
+        </div>
+      </div>
+      <div id="featuredNotes" class="feature-grid"></div>
     </section>
 
     <section class="panel">
